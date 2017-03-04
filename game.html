@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Sudoko GAme</title>
+	<script src="jquery-3.1.1.js"></script>
+	<script src="project.js"></script>
+	<style>
+		.tableFrame{
+			border: 4px solid rgb(8, 65, 22);
+			background-color: rgba(163, 215, 176, 0.8);
+			border-radius: 15px;
+			padding: 5px;
+			margin:20px auto;
+		}
+		td{
+			border: 2px solid rgb(7, 1, 9);
+			font-size: 100px;
+			text-align: center;
+			width: 100px;
+			height: 100px;
+			border-radius: 5px;
+			color:rgb(78, 3, 3);
+			margin: 5px;
+			-webkit-transition: 0.8s;
+		}
+		.focus{
+			border: 2px solid black;
+			background-color:#D44B0A;
+			font-weight: bold;
+		}
+		.constant{
+			background-color: grey;
+		}
+		body{
+			margin:20px auto;
+			text-align: center;
+			min-width: 1000px;
+		}
+		.hidden{
+			display: none;
+		}
+		.lightbox{
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			border:4px solid rgb(8, 65, 22);
+			background-color: rgba(163, 215, 176, 0.9);
+			width: 400px;
+			height: 200px;
+			padding: 20px;
+			border-radius: 10px;
+			z-index: 1;
+			padding: 25px;
+		}
+		input[type=button]{
+			margin: 50px;
+		    border: 2px solid rgb(8, 65, 22);
+		    background-color: #FF6920;
+		    padding: 10px;
+		    border-radius: 5px;
+		    color: white;
+		    font-weight: bolder;
+		}
+		input[type=button]:hover{
+			background-color: white;
+			color:#FF6920;
+		}
+		body{
+			background-image: url("4.jpg");
+
+		}
+		h1{
+			font-size: 50px;
+			color: #D44B0A;
+		}
+		#timer{
+			width: 150px;
+			margin: 0px auto;
+			border: 4px solid rgb(8, 65, 22);
+			border-radius: 10px;
+			text-shadow: #4E220E 2px 2px;
+			background-color: rgba(163, 215, 176, 0.8);
+		}
+	</style>
+</head>
+<body>
+	<div>
+			<h1 id="timer">1 : 00</h1>
+</div>
+<div class="hidden" id="win">
+	<h1>You Have WON!!</h1>
+	<input type="button" value="Play Again" class="again">
+	<input type="button" value="Close" class="close">
+</div>
+<div class="hidden" id="lost">
+	<h1>You Have LOST!!</h1>
+	<input type="button" value="Try Again" class="again">
+	<input type="button" value="Close" class="close">
+</div>
+	<div id="table">
+		<table id="game" class="tableFrame">
+			<tr><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td></tr>
+		</table>
+	</div>
+
+
+
+</body></html>
